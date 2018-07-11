@@ -8,7 +8,7 @@ def read_file(filename):
 
     Args:
         filename: A name of the file.
-        
+
     """
     f = open(filename, 'r')
     reader = csv.DictReader(f, fieldnames=['product', 'cost'])
