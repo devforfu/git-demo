@@ -2,8 +2,15 @@ import csv
 from collections import defaultdict
 
 
-def read_file(fname):
-    f = open(fname, 'r')
+def read_file(filename):
+    """
+    Reads the file with data and computes the cost.
+
+    Args:
+        filename: A name of the file.
+        
+    """
+    f = open(filename, 'r')
     reader = csv.DictReader(f, fieldnames=['product', 'cost'])
     _ = next(reader)
     products = defaultdict(lambda: 0)
