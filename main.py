@@ -3,6 +3,8 @@ from collections import defaultdict
 
 
 def read_file(fname):
+    """Reads file with costs and computes the total."""
+
     f = open(fname, 'r')
     reader = csv.DictReader(f, fieldnames=['product', 'cost'])
     _ = next(reader)
